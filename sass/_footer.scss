@@ -1,0 +1,43 @@
+footer{
+	background: #202020;
+	padding-top: 55px;
+	padding-bottom: 55px;
+	.social{
+		margin: 0;
+		padding: 0;
+		li{
+			display: inline-block;
+			margin-right: 33px;
+		}
+	}
+	.page-title{
+		text-align: center;
+	}
+	.menu-column{
+		text-align: right;
+		.toggle-menu{
+			display: inline-block;
+			width: 20px;
+			border-top: 4px solid #fff;
+			padding: 8px 0;
+			&:before{
+				display: block;
+				content: '';
+				width: 20px;
+				border-top: 2px solid #fff;
+				border-bottom: 2px solid #fff;
+				position: absolute;
+				top: 8px;
+			}
+			&:after{
+				display: block;
+				content: '';
+				width: 20px;
+				border-top: 2px solid #fff;
+				border-bottom: 2px solid #fff;
+				position: absolute;
+				top: 16px;
+			}
+		}
+	}
+}

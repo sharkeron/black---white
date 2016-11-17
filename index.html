@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Black &amp; White</title>
+	<link rel="stylesheet" href="css/main.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<ul class="social">
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="19" viewBox="0 0 20 19">
+								  <image id="icon-ball" data-name="icon-ball" width="20" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAQAAAA6heU+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8THQ1qnp3tAAABmElEQVQoz2XSS0jUURTH8c+M/4wGJRIqqAyFiWrhptoHLiIoKghCiKDHol0MLWqTUYQx4KIWliBBEVJUtAkjoidBGgNlD9y2aKHSoncjzsPbYsb//LVzN/ee+zu/yz3nSyNWyHlqSlnFtBdOWem/SDvplyAYdtZ5QyYERWdESVnGiOChK4J7cXaLEcEzy+cTkSdKjiDyRnAsYXFfMGpp7dAn2F+/2Kjoj06QklM1JrgEnUqGEh4nBI+w1XPBoCZ3VWTJq2pPCCPvBROCz/aArKr+lHGRQ1qsstYGXbZpQXDULaV68ZgMs0K8fnhtUI/bggOJVwaUIs1uum7Gd1N+1xu/CdcMaMY3X7RZEin562Vc26bXccuUtBpWkLZah73KjCvEsm6Tgse22ynojfNvfSRvThYcVDZtN2jy1ae6bJ05/bU+3sEuVQVrYpergo76rlKz6hNc8NOoTOKnOwSHsU9wuTHroGj9Ap4yym7oMdOY9Tw9D3QtkH4w26AnFfOYc06rd16ZlNau22YzLsqrLIZ3MeGnk4T/A+54j+MIGWknAAAAAElFTkSuQmCC"/>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="20" viewBox="0 0 25 20">
+								  <image id="icon-twitter" data-name="icon-twitter" width="25" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUCAQAAADSfl42AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8THC1I64xkAAABLElEQVQoz43TPyvFYRTA8Y+LlLoZSImFhQELJQwmIxbvwMRqsFBKLEYykJI3IINi8QZkQMkghpsSN6Vwb3H7Ga6r+/vdR9c5y/Oc0/f8e84Dtf6SUUfeRR5sakXKhC7YMhUEZhREv5qxLeNcCm7kTVcAfb7KgKLemTIDLyIFa+pjyE4FEIm86YPrn+u1yWJacBYAngwXnetlxlurxqRxHkCWS/HaPFY4n+UDyDykcOxUlGi+RUNghk+lw2Ww0ZAOlJDZfwKv6kpIyuG/kP3yGustylZFRuLNXnioApwkZ7FSBcjrSSI11mJLmNS58Kp3Wwo8aiSy+dfv6HcUBHbVxAsa0qhZr/H4RH4kZ8FG0thuRy4Y/dOezsooxZRNpo0Z1CGND/eunDqQDdX/DdwQEWakSOmpAAAAAElFTkSuQmCC"/>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+								  <image id="icon-behance" data-name="icon-behance" width="20" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8THBuHURn9AAAA+UlEQVQoz9XSsUtCURTH8c9TIyiqNwYOTgkVhUPNEUWjm0N/QRBEg2NDTa39Aa4RjQ0RDf0FOSi0OARNDUVLIGipvQZfoRL41s4dzoH7Ped37zmHY5+iMaftKNCVNt6+AlECDKlk2P8AM7Hf1QCBrEPbONBEzslwxYa6d3RcK2piVig085f0mZoHWS1PInlvXmVHpeFSXduLBXl7Klb1XHhW7l/3p1kYSFhxj2U1VXNyMTEAXon0lLA19OGWSJQxbKnfVy+6ETj3aHJUelpoChOqlrCjJK3QJ34qrgvjaN6+NbfK7nRsqogbnHjNeom4KO3Dxtgd7zr9BrrPVjjXLTyBAAAAAElFTkSuQmCC"/>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+								  <image id="icon-vimeo" data-name="icon-vimeo" width="20" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8TGzvzfq/yAAAA7UlEQVQoz7XSvS5EQRiH8d/aZDWiEHRaF6AQStmVuAKJSIjYYrUarUvQiHJrSnqN0Ko0CjfgK/asKIRXYXadsxFnGzPFfDxPMv+Zd2jqiJLe0azIjClv3YoYQsPIcNqgeOPIc5q/O9Cw7KIHe4E/7KtiXQhP5hJvJJ6GR40EJoSw0T9ltShumzWd0K1wbSut2kUxhKuEzoRwDsZl3zR/mUUz4A5cgp2fV85XoAXWhAeTmPLSZwXxFNS0rYCTHCuIr2q5KJsFNlD+el9b8PaXeJy0ei7dr2LYM+/Q5+D+f/ye7lBet+rektESLbP7BZAPqP6EeT1pAAAAAElFTkSuQmCC"/>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+								  <image id="icon-flickr" data-name="icon-flickr" width="20" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8TGxBfwlayAAAAyElEQVQoz9XRoU4DQRSF4W+3bcARBKamoOpISFbgMLwBCaYa05fjEXgBQtY3AVGDqGgXamjSW0GZLTW7pqIzZs7JP/ec5DKyEA13YZSZO9N8qky0wJC3ww4BdtPrx5tckb6G0lLhVDJCKA3A0EQIM7fgwsuWEMLKZZp8I4THpM/Na/D1X50PUQfiWYh8ryn09pxe3XHtOtl3QnhKum9ZR4d3xRb7FMK3BxmGyl9id4VTHf2dyJkvV3/iGHadq1pxVcfUvZMmzHgDRxZVNmpcZrgAAAAASUVORK5CYII="/>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-4 page-title">
+					<a href="index.html">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="165" height="20" viewBox="0 0 165 20">
+						  <image id="Logo-AgencyFB" width="165" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAUCAQAAABGtDWBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8TNC/7uEPiAAAErUlEQVRYw83YbWiWVRgH8J9zlnM5nWIQ66mpWzNYbdMksqAMeqMyIQgJoyIyIyL7IgQVQUFkkL1I+cWMPgRBkVFIGcEgA7Uv2st0c5WmaW/Lma7UtT19uM+z5/157j3bpP/94Zz7uq9zXef873Of67ovkjnXb26WwnWSknYrhuOSkp7IkTbrzrI4ZLvakaedkpKWg02SknYWtX+nvixLJzxeVLc+6EwFH0g6rQp8JinpnqC3XFLSlqy79AqzVzwzj52kl7NGpq/+qrwpzfGIeJinDizMka90SdZ9lavdWGB8nRVgQ1EPa8zKuj/P2qK6x/SBuaAJ57g4zBP2x1xVxagO7StgvtswPebYRaHtyJHPAHvCu71eYkSWjRWm4TfvFvUQzeR9h3Gu1agpMZ9uSzDXXlXhZTb50WQXhaejx6APwTVmY5ej+CZLo8/20BtIUbkGLHfbKBy1h3a+GY7nPd3imdAmiox/CGx0poyfDTox0+oyer2WiPZgwjmgxWcSqvGnYxVQORAOok7X4vmRYyGNb4MGquLZLIhFI722Cka3W4hBG8cwg2z0IPrAm4OkWeqD7xk3L0UxFio7sAv5p2UcrALvOTpua4nomoeWIGlyFqmsrnhkg/PxsQ5TSlL5kQPoypFOczd4Nba/fpPKaKR3ZVOQtEgFnd7xpa0QMqmcEtKg32ONjOj7RrfWvMCTiU0FpXeZgZ12lPQRxeRbfGEoxowiuuaJPuxBUzSaEnblvokkMUKKyrfQrg1/WB9rZETfd/Zpdaka/4zK760ovydfsNh0ay3za4Z0TZFMd8DPGkw3Wwt+kTBZY6Ayd1cuDTZmGBuaRvLMDSkq7w3tUVc4EsvIIpzxgy5M1uqrUU2hGn97r4zWNkvsUmOBBRnSmUX192tAs0Zs8wBazA9PslFXUajMR4PHQm9LKuzssUcfLvC51lhGOtBtyF5UFnimWVJGY7GtanDMQT+DIQedKqof7b3rVWOrf9HmfBxxclyIK4kUle3aNXkHC7wUY9wcCVEw6RohdjQ4CCV+AyOsk8AmCY2uAYc1ljhfoxPxJrBHL25AoT+drerVq7dyjPztNDdcOzKToX4vIh3/SqGdQGOP4QqofAPcXsZXdM49ZyCm1WhXtmLQAftwWREqB/Xr1x/bcjGcciBcpwrllXFyzSg9b3CfFY7j8qJp1Xq77bYsR9rtU0waOWnGB1E6NEv66JmVIZ9gVJqiR7twlc02q8fUrMCQibnatOWUJUhF7/tLBJHR43vDodctMwH6X1O5MIakND7Ri1oPjuNqzvgp9LoIAZGzkqBXSmWdJhyy1FJLPYt0cSMuhr0OHh3DH1c+UvWfnoz+8NmhMrWMl8GcgjpNOkNvuyeRou3rID/pKfm7crlGlNqtb3pWrYQ7S5TZ4Gl/EWqj5bA/xO8u/OWwC/GT0xPGX2u6WpSiMvP4zy1H1bo29PpDGwWd1FkUvf0OkyQhFNzaspLg/CIcx73tYTxelMpo1P2jWFoqVveEmV1oYou+s92R6uZ/4P3WlTXQjnSJ4oRDqAupC+/kHPPDvrStoJ3XwJWuKuJnfcFXUAqR50MhJY9mWEnRtwL8BzGfQUBgkxwxAAAAAElFTkSuQmCC"/>
+						</svg>
+					</a>
+				</div>
+				<div class="col-4 menu-column">
+					<a href="#" class="toggle-menu"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container image-container row">
+			<div class="row">
+				<div class="col-3">
+					<div class="photo-post">
+						<div class="photo-post-inner">
+							<img class="photo" src="img/Layer1.png" alt="photo">
+							<div class="info-top">
+								<div class="photo-data">
+									<div class="photo-title">
+										<h3>Awesome Day</h3>
+										<p>
+											<a href="#">View from above</a>
+										</p>
+									</div>
+									<div class="photo-date">
+										<p class="month">jan</p>
+										<p class="day">25th</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="info-bottom">
+								<div class="photo-credentials">
+									<div class="likes">
+										<a href="#"><img src="img/likes.png" alt="likes"></a>
+										<a href="#">37</a>
+									</div>
+									<div class="comments">
+										<a href="#"><img src="img/comments.png" alt="comments"></a>
+										<a href="#">15</a>
+									</div>
+									<div class="toggle-screen">
+										<a href="#"><img src="img/togglescreen.png" alt="togglescreen"></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="photo-post">
+						<div class="photo-post-inner">
+							<img class="photo" src="img/Layer2.png" alt="photo">
+							<div class="info-top">
+								<div class="photo-data">
+									<div class="photo-title">
+										<h3>Awesome Day</h3>
+										<p>
+											<a href="#">View from above</a>
+										</p>
+									</div>
+									<div class="photo-date">
+										<p class="month">jan</p>
+										<p class="day">25th</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="info-bottom">
+								<div class="photo-credentials">
+									<div class="likes">
+										<a href="#"><img src="img/likes.png" alt="likes"></a>
+										<a href="#">37</a>
+									</div>
+									<div class="comments">
+										<a href="#"><img src="img/comments.png" alt="comments"></a>
+										<a href="#">15</a>
+									</div>
+									<div class="toggle-screen">
+										<a href="#"><img src="img/togglescreen.png" alt="togglescreen"></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="photo-post">
+						<div class="photo-post-inner">
+							<img class="photo" src="img/Layer3.png" alt="photo">
+							<div class="info-top">
+								<div class="photo-data">
+									<div class="photo-title">
+										<h3>Awesome Day</h3>
+										<p>
+											<a href="#">View from above</a>
+										</p>
+									</div>
+									<div class="photo-date">
+										<p class="month">jan</p>
+										<p class="day">25th</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="info-bottom">
+								<div class="photo-credentials">
+									<div class="likes">
+										<a href="#"><img src="img/likes.png" alt="likes"></a>
+										<a href="#">37</a>
+									</div>
+									<div class="comments">
+										<a href="#"><img src="img/comments.png" alt="comments"></a>
+										<a href="#">15</a>
+									</div>
+									<div class="toggle-screen">
+										<a href="#"><img src="img/togglescreen.png" alt="togglescreen"></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="photo-post">
+						<div class="photo-post-inner">
+							<img class="photo" src="img/Layer4.png" alt="photo">
+							<div class="info-top">
+								<div class="photo-data">
+									<div class="photo-title">
+										<h3>Awesome Day</h3>
+										<p>
+											<a href="#">View from above</a>
+										</p>
+									</div>
+									<div class="photo-date">
+										<p class="month">jan</p>
+										<p class="day">25th</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="info-bottom">
+								<div class="photo-credentials">
+									<div class="likes">
+										<a href="#"><img src="img/likes.png" alt="likes"></a>
+										<a href="#">37</a>
+									</div>
+									<div class="comments">
+										<a href="#"><img src="img/comments.png" alt="comments"></a>
+										<a href="#">15</a>
+									</div>
+									<div class="toggle-screen">
+										<a href="#"><img src="img/togglescreen.png" alt="togglescreen"></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="photo-post">
+						<div class="photo-post-inner">
+							<img class="photo" src="img/Layer5.png" alt="photo">
+							<div class="info-top">
+								<div class="photo-data">
+									<div class="photo-title">
+										<h3>Awesome Day</h3>
+										<p>
+											<a href="#">View from above</a>
+										</p>
+									</div>
+									<div class="photo-date">
+										<p class="month">jan</p>
+										<p class="day">25th</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="info-bottom">
+								<div class="photo-credentials">
+									<div class="likes">
+										<a href="#"><img src="img/likes.png" alt="likes"></a>
+										<a href="#">37</a>
+									</div>
+									<div class="comments">
+										<a href="#"><img src="img/comments.png" alt="comments"></a>
+										<a href="#">15</a>
+									</div>
+									<div class="toggle-screen">
+										<a href="#"><img src="img/togglescreen.png" alt="togglescreen"></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="photo-post">
+						<div class="photo-post-inner">
+							<img class="photo" src="img/Layer6.png" alt="photo">
+							<div class="info-top">
+								<div class="photo-data">
+									<div class="photo-title">
+										<h3>Awesome Day</h3>
+										<p>
+											<a href="#">View from above</a>
+										</p>
+									</div>
+									<div class="photo-date">
+										<p class="month">jan</p>
+										<p class="day">25th</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="info-bottom">
+								<div class="photo-credentials">
+									<div class="likes">
+										<a href="#"><img src="img/likes.png" alt="likes"></a>
+										<a href="#">37</a>
+									</div>
+									<div class="comments">
+										<a href="#"><img src="img/comments.png" alt="comments"></a>
+										<a href="#">15</a>
+									</div>
+									<div class="toggle-screen">
+										<a href="#"><img src="img/togglescreen.png" alt="togglescreen"></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="photo-post">
+						<div class="photo-post-inner">
+							<img class="photo" src="img/Layer7.png" alt="photo">
+							<div class="info-top">
+								<div class="photo-data">
+									<div class="photo-title">
+										<h3>Awesome Day</h3>
+										<p>
+											<a href="#">View from above</a>
+										</p>
+									</div>
+									<div class="photo-date">
+										<p class="month">jan</p>
+										<p class="day">25th</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="info-bottom">
+								<div class="photo-credentials">
+									<div class="likes">
+										<a href="#"><img src="img/likes.png" alt="likes"></a>
+										<a href="#">37</a>
+									</div>
+									<div class="comments">
+										<a href="#"><img src="img/comments.png" alt="comments"></a>
+										<a href="#">15</a>
+									</div>
+									<div class="toggle-screen">
+										<a href="#"><img src="img/togglescreen.png" alt="togglescreen"></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="photo-post">
+						<div class="photo-post-inner">
+							<img class="photo" src="img/Layer8.png" alt="photo">
+							<div class="info-top">
+								<div class="photo-data">
+									<div class="photo-title">
+										<h3>Awesome Day</h3>
+										<p>
+											<a href="#">View from above</a>
+										</p>
+									</div>
+									<div class="photo-date">
+										<p class="month">jan</p>
+										<p class="day">25th</p>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="info-bottom">
+								<div class="photo-credentials">
+									<div class="likes">
+										<a href="#"><img src="img/likes.png" alt="likes"></a>
+										<a href="#">37</a>
+									</div>
+									<div class="comments">
+										<a href="#"><img src="img/comments.png" alt="comments"></a>
+										<a href="#">15</a>
+									</div>
+									<div class="toggle-screen">
+										<a href="#"><img src="img/togglescreen.png" alt="togglescreen"></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container last-blog">
+			<div class="last-blog-left col-6">
+				<div class="row">
+					<div class="col-12">
+						<div class="contact-me">
+							<h2 class="title">Contact Me</h2>
+							<p class="content">
+								Mom hammer creepy me gusta morbi eat le friend steve jobs
+								<br>cellphone clinton cereal guy.</p>
+							<form>
+								<p class="row col-12">
+									<input type="text" id="name" class="col-7" placeholder="Your Name">
+									<label for="name">*required</label>
+								</p>
+								<p class="row col-12">
+									<input type="email" id="email" class="col-7" placeholder="Your E-Mail Address">
+									<label for="email">*please enter a valid address</label>
+								</p>
+								<p class="row col-12">
+									<textarea name="ta" rows="8" cols="40" placeholder="Your Message" class="col-12"></textarea>
+								</p>
+								<p class="row col-12">
+									<button type="submit" class="col-4 btn">SEND E-MAIL</button>
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="last-blog-right col-6">
+				<div class="row">
+					<div class="col-6 random-post">
+						<h2>Random Post</h2>
+						<div class="image"><img src="img/Layer14.png" alt="Random Post"></div>
+						<p>Some advise on Photography</p>
+					</div>
+					<div class="col-6 random-post">
+						<h2>Random Post</h2>
+						<div class="image"><img src="img/Layer15.png" alt="Random Post"></div>
+						<p>Some advise on Photography</p>
+					</div>
+					<div class="col-12 newsletter">
+						<h1>Black &amp; White</h1>
+						<h2>Newsletter</h2>
+						<p class="col-12"><input type="email" placeholder="Your E-Mail Address" class="col-8 col-offset-2"></p>
+						<p class="col-12"><button type="submit" name="button" class="col-4 btn col-offset-4">subscribe</button></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<ul class="social">
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="19" viewBox="0 0 20 19">
+								<image id="icon-ball" data-name="icon-ball" width="20" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAQAAAA6heU+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8THQ1qnp3tAAABmElEQVQoz2XSS0jUURTH8c+M/4wGJRIqqAyFiWrhptoHLiIoKghCiKDHol0MLWqTUYQx4KIWliBBEVJUtAkjoidBGgNlD9y2aKHSoncjzsPbYsb//LVzN/ee+zu/yz3nSyNWyHlqSlnFtBdOWem/SDvplyAYdtZ5QyYERWdESVnGiOChK4J7cXaLEcEzy+cTkSdKjiDyRnAsYXFfMGpp7dAn2F+/2Kjoj06QklM1JrgEnUqGEh4nBI+w1XPBoCZ3VWTJq2pPCCPvBROCz/aArKr+lHGRQ1qsstYGXbZpQXDULaV68ZgMs0K8fnhtUI/bggOJVwaUIs1uum7Gd1N+1xu/CdcMaMY3X7RZEin562Vc26bXccuUtBpWkLZah73KjCvEsm6Tgse22ynojfNvfSRvThYcVDZtN2jy1ae6bJ05/bU+3sEuVQVrYpergo76rlKz6hNc8NOoTOKnOwSHsU9wuTHroGj9Ap4yym7oMdOY9Tw9D3QtkH4w26AnFfOYc06rd16ZlNau22YzLsqrLIZ3MeGnk4T/A+54j+MIGWknAAAAAElFTkSuQmCC"/>
+							</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="20" viewBox="0 0 25 20">
+								<image id="icon-twitter" data-name="icon-twitter" width="25" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUCAQAAADSfl42AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8THC1I64xkAAABLElEQVQoz43TPyvFYRTA8Y+LlLoZSImFhQELJQwmIxbvwMRqsFBKLEYykJI3IINi8QZkQMkghpsSN6Vwb3H7Ga6r+/vdR9c5y/Oc0/f8e84Dtf6SUUfeRR5sakXKhC7YMhUEZhREv5qxLeNcCm7kTVcAfb7KgKLemTIDLyIFa+pjyE4FEIm86YPrn+u1yWJacBYAngwXnetlxlurxqRxHkCWS/HaPFY4n+UDyDykcOxUlGi+RUNghk+lw2Ww0ZAOlJDZfwKv6kpIyuG/kP3yGustylZFRuLNXnioApwkZ7FSBcjrSSI11mJLmNS58Kp3Wwo8aiSy+dfv6HcUBHbVxAsa0qhZr/H4RH4kZ8FG0thuRy4Y/dOezsooxZRNpo0Z1CGND/eunDqQDdX/DdwQEWakSOmpAAAAAElFTkSuQmCC"/>
+							</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+								<image id="icon-behance" data-name="icon-behance" width="20" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8THBuHURn9AAAA+UlEQVQoz9XSsUtCURTH8c9TIyiqNwYOTgkVhUPNEUWjm0N/QRBEg2NDTa39Aa4RjQ0RDf0FOSi0OARNDUVLIGipvQZfoRL41s4dzoH7Ped37zmHY5+iMaftKNCVNt6+AlECDKlk2P8AM7Hf1QCBrEPbONBEzslwxYa6d3RcK2piVig085f0mZoHWS1PInlvXmVHpeFSXduLBXl7Klb1XHhW7l/3p1kYSFhxj2U1VXNyMTEAXon0lLA19OGWSJQxbKnfVy+6ETj3aHJUelpoChOqlrCjJK3QJ34qrgvjaN6+NbfK7nRsqogbnHjNeom4KO3Dxtgd7zr9BrrPVjjXLTyBAAAAAElFTkSuQmCC"/>
+							</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+								<image id="icon-vimeo" data-name="icon-vimeo" width="20" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8TGzvzfq/yAAAA7UlEQVQoz7XSvS5EQRiH8d/aZDWiEHRaF6AQStmVuAKJSIjYYrUarUvQiHJrSnqN0Ko0CjfgK/asKIRXYXadsxFnGzPFfDxPMv+Zd2jqiJLe0azIjClv3YoYQsPIcNqgeOPIc5q/O9Cw7KIHe4E/7KtiXQhP5hJvJJ6GR40EJoSw0T9ltShumzWd0K1wbSut2kUxhKuEzoRwDsZl3zR/mUUz4A5cgp2fV85XoAXWhAeTmPLSZwXxFNS0rYCTHCuIr2q5KJsFNlD+el9b8PaXeJy0ei7dr2LYM+/Q5+D+f/ye7lBet+rektESLbP7BZAPqP6EeT1pAAAAAElFTkSuQmCC"/>
+							</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+								<image id="icon-flickr" data-name="icon-flickr" width="20" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCw8TGxBfwlayAAAAyElEQVQoz9XRoU4DQRSF4W+3bcARBKamoOpISFbgMLwBCaYa05fjEXgBQtY3AVGDqGgXamjSW0GZLTW7pqIzZs7JP/ec5DKyEA13YZSZO9N8qky0wJC3ww4BdtPrx5tckb6G0lLhVDJCKA3A0EQIM7fgwsuWEMLKZZp8I4THpM/Na/D1X50PUQfiWYh8ryn09pxe3XHtOtl3QnhKum9ZR4d3xRb7FMK3BxmGyl9id4VTHf2dyJkvV3/iGHadq1pxVcfUvZMmzHgDRxZVNmpcZrgAAAAASUVORK5CYII="/>
+							</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-4 page-title">
+					<a href="index.html">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="165" height="20" fill="black" viewBox="0 0 165 20">
+							<image id="Logo-AgencyFB" width="165" height="20" fill="black" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAAUCAQAAABGtDWBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgCxAVEAZEFQFTAAAE20lEQVRYw83Yb2hf1RkH8E/T1Nlf17RpqSDxt6VtajqIJmmVYSe4CpuOOQ0IUobDyZhThti+EQQVQUGmYOtWNt90jr0QBg4jjrJVBgUr2PomVRebtG6trXb+6Zr+ObE2NtcX9/yS3//fzS9p2fe+OM997nOe55zvPfc8zz1CUnZ9Gm4N4vX9kIQkDE3dl1+nQhKS8EiZdk0YKfF4IewJi6ae7g5JSMJAEIQdIQlJ2FvT/53hRImnM2FLTdv2aHN5EIRXQhK+DC1BIrwekpCEnyUSiTAQkpCEwZK7oRozXlrBThK2xWcDZfqxFuVY4deyYZU2sK5Mf7erS+5bfM8Pq/Rvswlsrxlhs2Ul99/0cE3bk06AlaALl/l2HCcczDirptEa2+fBardhcca+62PbX6ZfAvYbAjfLT+lKsUkOn/pLzQjpSP7qGL7hfiysM54RG7DS+1riy+zyn/H5vhWfzhwTXgU3Wo59juPdEosT9kQpFKjcDAbcNoNAfbFdbYlTFU8HPRHbfI3+vwIvON8gzna7sdT9DewO2SBdg3mXgW6vy2vF/3Inm6AyGAC73YSnDVZYvJcbKIgt2XxWxfopqbeJ3n3WYcILsxhBKUaRfuBromaNwgc/OmdRamI2VPZjHyp3yyy4D7zs+JzNJaVrFbqjpsslpLK16Z4drsDf9FtQl8rXHMZwmTbnp+C3meONmdfAYnpVdkVNt0LSOTS3tFVDMZUL3Ao+y9Qzpe9dI3oqEk8xdlTV3mUJ9nqrbow0J//IGy5kGFFK1yrphz1hgU4L4qo8cDFJTFGg8k/o04vPbc3UM6XvXw7o8R0LfTGjuD9G4zX5G9db7GG3+6RIuznWBuUIPtJhseW68V9583VGKstX5cbx1McSs0PX+LYobS9QeU9sj7vOx5mcrMd5/zaM+Xq8PaMhtGLcyw2sdtlgn4XWWlukXVrT/qAOrNGJXX6Bbqvjk1K0NZUqK9HhoSgNFtLOfvudwJX+qSeTk36MuOB9NJd4cjY0sLjeTgtx0hEfgQuOOFfTPl17N2vFTl+h1xX4OHd2ToiriwKVffp0eQlrPZeh3wp5aTIZniJ2JjgCtjSwekYeO+R1uhEc01lnf013xFvAfofwA1T709mpXbt2d8+Sv71Wxuut4mJozLOYzn/10EekcdRkE1T+AfykQax0n3tKyOg1XZU9mHDYAVxTg8qJ3FhuLDeW2XMtnMsdjte5anVlllozLc87/Nwmp3BtzbJqqyFDbi/TjvgH5k3tNHODtBxaZnrrWVakv8hotkRPV+F9XvSidlxekhiKsVKv3rJjCQrZ+946SWTm+MBklEYUF0D/11Suy6Cpj787hEV+OYezOe/DKA0TEyKXpEBvlso2XThqo402ehLThxtZMen34MFZ/HFVonD+M1okT14aKgvT2AZWVLXpsjtKezyKAm3vRP1Zj6lclQM6UW+1/tGTFsm7s84xGzzuNPFstBEOxvw9jNOOuQof5r68aPz1jA+WU1m8/ZcfRy1yU5TGYpsmncJelL79fvMkEA/cekuK4MpDOE75swewpSaVaa97ZzC1Qq4ejSO7ysU99F3ujoJY+YGPeaahgz5MH1GccRRtsXThpbJtftKbdlX18zvwXTfUiLO16iuohzTyUWeLRtjMoW8T+BpsYuO/5fietgAAAABJRU5ErkJggg=="/>
+						</svg>
+					</a>
+				</div>
+				<div class="col-4 menu-column">
+					<a href="#" class="toggle-menu"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
